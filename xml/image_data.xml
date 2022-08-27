@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE TalentForage SYSTEM "image_data.dtd">
+<TalentForage>
+    <!-- Image Data Table-->
+    <image_data id="nshwqiuy2h178">
+        <user_id>dn18y912n9yed</user_id>
+        <image_url>https://myhost/path/to/file.jpeg</image_url>
+        <title>My Art</title>
+        <sub_title>This is one of my recent art works</sub_title>
+        <created_date>22/06/2021</created_date>
+        <uploaded_date>07/08/2022</uploaded_date>
+        <price>50</price>
+        <no_of_views>123</no_of_views>
+        <no_of_likes>67</no_of_likes>
+        <allow_comment>true</allow_comment>
+        <comments_id>120n8tew6f1237</comments_id>
+        <category>ART</category>
+        <visibility>public</visibility>
+    </image_data>
+
+    <image_data id="neo1278go129t">
+        <user_id>dn18y912n9yed</user_id>
+        <image_url>https://myhost/path/to/other_file.png</image_url>
+        <title>My Photography</title>
+        <sub_title>Sunrises represents a glimmer of hope, here's it's essence captured in photography</sub_title>
+        <created_date>09/07/2022</created_date>
+        <uploaded_date>07/08/2022</uploaded_date>
+        <price>250</price>
+        <no_of_views>3124</no_of_views>
+        <no_of_likes>2998</no_of_likes>
+        <allow_comment>false</allow_comment>
+        <comments_id>null</comments_id>
+        <category>PHOTOGRAPHY</category>
+        <visibility>private</visibility>
+    </image_data>
+
+    <image_data id="ne7182t12">
+        <user_id>dn18y912n9yed</user_id>
+        <image_url>https://myhost/path/to/other_file.jpg</image_url>
+        <title>Cray Clay</title>
+        <sub_title>A clay model I made describing the chaos in this world. </sub_title>
+        <created_date>14/06/2022</created_date>
+        <uploaded_date>04/07/2022</uploaded_date>
+        <price>100</price>
+        <no_of_views>32123</no_of_views>
+        <no_of_likes>22334</no_of_likes>
+        <allow_comment>true</allow_comment>
+        <comments_id>120n8tew6f1237</comments_id>
+        <category>CRAFT</category>
+        <visibility>public</visibility>
+    </image_data>
+
+</TalentForage>

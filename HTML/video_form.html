@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../CSS/main.css">
+    <script src="../JS/validate_video.js"></script>
+    <title>Upload Videos</title>
+</head>
+
+<body>
+
+    <script>
+
+        let isNavOpen = false;
+        function nav() {
+            if (isNavOpen) {
+                document.getElementById("top_drawer").style.transform = "translate(0px, -100%)";
+                isNavOpen = false;
+            } else {
+                document.getElementById("top_drawer").style.transform = "translate(0px, 0px)";
+                isNavOpen = true;
+            }
+        }
+    </script>
+
+
+    <ul class="nav_bar_ul">
+        <li class="nav_item"><a href="index.html"><span class="nav_logo_item">TalentForage</span></a></li>
+        <li class="nav_item_right">
+            <a href="profile_page.html"><i class="fa fa-user"></i></a>
+            <a href="about.asp"><i class="fa fa-gear"></i></a>
+            <a href="about.asp"><i class="fa fa-sign-out"></i></a>
+        </li>
+        <li class="nav_item_right right_item">
+            <a onclick="nav()"><i class="fa fa fa-bars"></i></a>
+        </li>
+    </ul>
+
+    <div id="top_drawer">
+        <ul>
+            <li class="drawer_list_item">
+                <a href="profile_page.html" class="drawer_item"><i class="fa fa-user drawer_icon"></i><span>Profile</span></a>
+            </li>
+            <li class="drawer_list_item">
+
+                <a href="about.asp" class="drawer_item"><i class="fa fa-gear drawer_icon"></i><span>Settings</span></a>
+            </li>
+            <li class="drawer_list_item">
+
+                <a href="about.asp" class="drawer_item"><i class="fa fa-sign-out drawer_icon"></i><span>Sign Out</span></a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="center_content">
+        <div class="center_card">
+            <div class="row">
+                <div class="column_left">
+                    <h2>Share Videos</h2>
+                    <p class="desc">
+                        </br>
+                        Got something to show the world?
+                        </br></br>
+                        It happens to be a video?
+                        </br></br>
+                        Like a short film maybe, or a showcase of your talent?
+                        </br></br>
+                        Upload it to TalentForage and let people know how skillful you are!
+                        </br></br></br>
+                        SkillForage lets you upload videos of anything you wanna show people!
+                        </br></br>
+                        Choose a suitable category to make sure it reaches the right people. Can't find a category?
+                        Request for one!
+                        Our team will review it and add it if the request is valid!
+                    </p>
+                </div>
+                <div class="column">
+                    <div class="column_responsive">
+                        <h2>Share Videos</h2>
+                        <p class="desc">
+                            </br>
+                            Got something to show the world?
+                            </br></br>
+                            It happens to be a video?
+                            </br></br>
+                            Like a short film maybe, or a showcase of your talent?
+                            </br></br>
+                            Upload it to TalentForage and let people know how skillful you are!
+                            </br></br>
+                            SkillForage lets you upload videos of anything you wanna show people!
+                            </br></br>
+                            Choose a suitable category to make sure it reaches the right people. Can't find a category?
+                            Request for one!
+                            Our team will review it and add it if the request is valid!
+                            </br>
+                            </br></br>
+                        </p>
+                    </div>
+                    <form name="video_form" onsubmit="return validateVideo()">
+                        <div class="input_tag_first">Video</div>
+                        <input type="file" accept="video/*" placeholder="video" name="video">
+
+                        <div class="input_tag">Title of your work</div>
+                        <input type="text" placeholder="Title" name="title">
+
+                        <div class="input_tag">Description of your work</div>
+                        <input type="text" placeholder="Description" name="desc">
+
+                        <div class="input_tag">Created Date</div>
+                        <input type="date" placeholder="Date" name="date">
+
+                        <div class="input_tag">Contribution Price</div>
+                        <input type="number" placeholder="Price" name="price">
+
+                        <div class="input_tag">Category of Image</div>
+                        <select name="category" id="category" name="category">
+                            <option value="talent">Talent</option>
+                            <option value="cinematography">Cinematography</option>
+                            <option value="other">Other</option>
+                        </select>
+
+                        <div class="flex_div">
+                            <div class="flex_inner">
+                                <div class="input_tag">Allow Comments</div>
+                                <input type="checkbox" placeholder="Title" class="checkbox">
+                            </div>
+
+                            <div class="flex_inner">
+                                <div class="input_tag">Public</div>
+                                <input type="checkbox" placeholder="Title" class="checkbox">
+                            </div>
+
+
+                            <div class="flex_inner">
+                                <div class="input_tag">Allow Live Caption</div>
+                                <input type="checkbox" placeholder="Title" class="checkbox">
+                            </div>
+                        </div>
+
+                        <button type="submit" class="submit">Upload</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <iframe src="../HTML/bottom_bar.html"></iframe>
+
+
+</body>
+
+</html>

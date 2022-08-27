@@ -1,0 +1,16 @@
+<!ELEMENT TalentForage (image_data*)>
+<!ELEMENT image_data (user_id,image_url,title,sub_title,created_date,uploaded_date,price,no_of_views,no_of_likes,allow_comment,comments_id,category,visibility)>
+<!ATTLIST image_data id CDATA #REQUIRED>
+<!ELEMENT user_id (#PCDATA)>
+<!ELEMENT image_url (#PCDATA)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT sub_title (#PCDATA)>
+<!ELEMENT created_date (#PCDATA)>
+<!ELEMENT uploaded_date (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+<!ELEMENT no_of_views (#PCDATA)>
+<!ELEMENT no_of_likes (#PCDATA)>
+<!ELEMENT allow_comment (#PCDATA)>
+<!ELEMENT comments_id (#PCDATA) >
+<!ELEMENT category (#PCDATA)>
+<!ELEMENT visibility (#PCDATA)>

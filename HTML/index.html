@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../CSS/card_css.css">
+    <link rel="stylesheet" href="../CSS/main.css">
+    <title>Home</title>
+    <style>
+
+        .center_content {
+            margin: auto;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .center_card {
+            margin: auto;
+            width: 80%;
+            height: 80%;
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            overflow: hidden;
+        }
+
+        .row_header {
+            height: 100%;
+        }
+
+        .column_header {
+            float: left;
+            padding: 10px;
+        }
+
+        .row_header:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .b{
+            width: 70%;
+             height: 100%;
+        }
+
+        .desc {
+            padding-top: 10px;
+            text-align: justify;
+            color: rgb(176, 176, 176);
+            font-weight: 100;
+        }
+
+        .main_body {
+            padding-top: 50px;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .inner_card {
+            width: 100%;
+            margin-top: 10px;
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            overflow: scroll;
+        }
+
+        .header_content {
+            margin: 20px;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            background-color: #3a34b8;
+            color: white;
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        .header_content p {
+            font-size: 15px;
+            font-weight: 100;
+        }
+
+        @media only screen and (max-width: 600px) {
+
+            .a{
+                display: none;
+            }
+
+            .b{
+                width: 100%;
+            }
+
+        }
+
+        .avatar {
+            vertical-align: middle;
+            height: 100px;
+            background-color: white;
+            border-radius: 20%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+
+        let isNavOpen = false;
+        function nav() {
+            if (isNavOpen) {
+                document.getElementById("top_drawer").style.transform = "translate(0px, -100%)";
+                isNavOpen = false;
+            } else {
+                document.getElementById("top_drawer").style.transform = "translate(0px, 0px)";
+                isNavOpen = true;
+            }
+        }
+    </script>
+
+
+    <ul class="nav_bar_ul">
+        <li class="nav_item"><a href="index.html"><span class="nav_logo_item">TalentForage</span></a></li>
+        <li class="nav_item_right">
+            <a href="profile_page.html"><i class="fa fa-user"></i></a>
+            <a href="about.asp"><i class="fa fa-gear"></i></a>
+            <a href="about.asp"><i class="fa fa-sign-out"></i></a>
+        </li>
+        <li class="nav_item_right right_item">
+            <a onclick="nav()"><i class="fa fa fa-bars"></i></a>
+        </li>
+    </ul>
+
+    <div id="top_drawer">
+        <ul>
+            <li class="drawer_list_item">
+                <a href="profile_page.html" class="drawer_item"><i class="fa fa-user drawer_icon"></i><span>Profile</span></a>
+            </li>
+            <li class="drawer_list_item">
+
+                <a href="about.asp" class="drawer_item"><i class="fa fa-gear drawer_icon"></i><span>Settings</span></a>
+            </li>
+            <li class="drawer_list_item">
+
+                <a href="about.asp" class="drawer_item"><i class="fa fa-sign-out drawer_icon"></i><span>Sign
+                        Out</span></a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="main_body">
+        <div class="hero-image">
+            <div class="hero-text">
+              <h1 style="font-size:50px">Welcome to <span class="talent_forage">TalentForage</span></h1>
+              <p>Home to thousands of talented people showcasing their talents</p>
+              <button class="submit">Start Exploring</button>
+            </div>
+          </div>
+        <div class="header_content">
+            <div class="row_header">
+                <div class="column_header">
+                    <img src="../IMAGES/sticker.png" alt="Avatar" class="avatar">
+                </div>
+                <div class="column_header">
+                    <h1>
+                        Hey there Soorya S, Welcome Back!
+                    </h1>
+                    </br>
+                    <p>Got anything to share with us? Share it!</p>
+                    <p>Here to explore talent? Explore it!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row_header" style="width: 100; height: 70%; margin: 20px;">
+            <div class="column_header a" style="width: 30%; height: 100%;">
+                <div class="inner_card" style="width: 100%; height: 100%;">
+                    <div class="container">
+                        <div class="row_post">
+                            <h1>
+                                Recent Posts
+                            </h1>
+                            <div class="col-md-6 item">
+                                <div class="item-in">
+                                    <h4>Some Kind of Title</h4>
+                                    <div class="seperator"></div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi expedita eveniet
+                                        consectetur, voluptates voluptatum, sit excepturi earum. Veniam eius amet,
+                                        accusantium, deserunt officia, quos qui debitis laboriosam velit quis autem!</p>
+                                        <a href="profile_page_view.html">By Soorya S
+                                            <i class="fa fa-long-arrow-right"></i>
+                                        </a>
+                                        <a href="#">Contribute
+                                            <i class="fa fa-long-arrow-right"></i>
+                                        </a>
+                                        <a href="report_form.html">Report
+                                            <i class="fa fa-long-arrow-right"></i>
+                                        </a>
+                                        <a href="contact_me.html">Contact Me
+                                            <i class="fa fa-long-arrow-right"></i>
+                                        </a>
+                                </div>
+                            </div>
+                            <div class="col-md-6 item">
+                                <div class="item-in">
+                                    <h4>Some Kind of Title</h4>
+                                    <div class="seperator"></div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi expedita eveniet
+                                        consectetur, voluptates voluptatum, sit excepturi earum. Veniam eius amet,
+                                        accusantium, deserunt officia, quos qui debitis laboriosam velit quis autem!</p>
+                                        <a href="profile_page_view.html">By Soorya S
+                                            <i class="fa fa-long-arrow-right"></i>
+                                        </a>
+                                        <a href="#">Contribute
+                                            <i class="fa fa-long-arrow-right"></i>
+                                        </a>
+                                        <a href="report_form.html">Report
+                                            <i class="fa fa-long-arrow-right"></i>
+                                        </a>
+                                        <a href="contact_me.html">Contact Me
+                                            <i class="fa fa-long-arrow-right"></i>
+                                        </a>
+                                </div>
+                            </div>
+                            <div class="col-md-6 item">
+                                <div class="item-in">
+                                    <h4>Some Kind of Title</h4>
+                                    <div class="seperator"></div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi expedita eveniet
+                                        consectetur, voluptates voluptatum, sit excepturi earum. Veniam eius amet,
+                                        accusantium, deserunt officia, quos qui debitis laboriosam velit quis autem!</p>
+                                        <a href="profile_page_view.html">By Soorya S
+                                            <i class="fa fa-long-arrow-right"></i>
+                                        </a>
+                                        <a href="#">Contribute
+                                            <i class="fa fa-long-arrow-right"></i>
+                                        </a>
+                                        <a href="report_form.html">Report
+                                            <i class="fa fa-long-arrow-right"></i>
+                                        </a>
+                                        <a href="contact_me.html">Contact Me
+                                            <i class="fa fa-long-arrow-right"></i>
+                                        </a>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6 item">
+                                <div class="item-in">
+                                    <h4>Some Kind of Title</h4>
+                                    <div class="seperator"></div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi expedita eveniet
+                                        consectetur, voluptates voluptatum, sit excepturi earum. Veniam eius amet,
+                                        accusantium, deserunt officia, quos qui debitis laboriosam velit quis autem!</p>
+                                        <a href="profile_page_view.html">By Soorya S
+                                            <i class="fa fa-long-arrow-right"></i>
+                                        </a>
+                                        <a href="#">Contribute
+                                            <i class="fa fa-long-arrow-right"></i>
+                                        </a>
+                                        <a href="report_form.html">Report
+                                            <i class="fa fa-long-arrow-right"></i>
+                                        </a>
+                                        <a href="contact_me.html">Contact Me
+                                            <i class="fa fa-long-arrow-right"></i>
+                                        </a>
+                                </div>
+                            </div>
+                            <div class="col-md-6 item">
+                                <div class="item-in">
+                                    <h4>Some Kind of Title</h4>
+                                    <div class="seperator"></div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi expedita eveniet
+                                        consectetur, voluptates voluptatum, sit excepturi earum. Veniam eius amet,
+                                        accusantium, deserunt officia, quos qui debitis laboriosam velit quis autem!</p>
+                                        <a href="profile_page_view.html">By Soorya S
+                                            <i class="fa fa-long-arrow-right"></i>
+                                        </a>
+                                        <a href="#">Contribute
+                                            <i class="fa fa-long-arrow-right"></i>
+                                        </a>
+                                        <a href="report_form.html">Report
+                                            <i class="fa fa-long-arrow-right"></i>
+                                        </a>
+                                        <a href="contact_me.html">Contact Me
+                                            <i class="fa fa-long-arrow-right"></i>
+                                        </a>
+                                </div>
+                            </div>
+                            <div class="col-md-6 item">
+                                <div class="item-in">
+                                    <h4>Some Kind of Title</h4>
+                                    <div class="seperator"></div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi expedita eveniet
+                                        consectetur, voluptates voluptatum, sit excepturi earum. Veniam eius amet,
+                                        accusantium, deserunt officia, quos qui debitis laboriosam velit quis autem!</p>
+                                        <a href="profile_page_view.html">By Soorya S
+                                            <i class="fa fa-long-arrow-right"></i>
+                                        </a>
+                                        <a href="#">Contribute
+                                            <i class="fa fa-long-arrow-right"></i>
+                                        </a>
+                                        <a href="report_form.html">Report
+                                            <i class="fa fa-long-arrow-right"></i>
+                                        </a>
+                                        <a href="contact_me.html">Contact Me
+                                            <i class="fa fa-long-arrow-right"></i>
+                                        </a>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="submit" style="width:max-content; margin: 20px">See More</button>
+                    </div>
+                </div>
+            </div>
+            <div class="column_header b">
+                <div class="inner_card" style="width: 100%; height: 100%;">
+                    <div class="row_post">
+                        <h1>
+                            Add Posts
+                        </h1>
+                        <a href="image_form.html"><button class="submit" style="width:max-content; margin: 10px; margin-left: 20px;">Add Image</button></a>
+                        <a href="video_form.html"><button class="submit" style="width:max-content; margin: 5px">Add Video</button></a>
+                        <a href="audio_form.html"><button class="submit" style="width:max-content; margin: 5px">Add Audio</button></a>
+                        <a href="text_form.html"><button class="submit" style="width:max-content; margin: 5px">Add Text</button></a>
+                        <h1>
+                            Your Posts
+                        </h1>
+                        <div class="col-md-6 item">
+                            <div class="item-in">
+                                <h4>Text Posts</h4>
+                                <div class="seperator"></div>
+
+                                <!--SLIDER HERE-->
+                                <div class="horizontal_scroller">
+
+                                    <div class="card_element">
+                                        <h2>Title 1</h2>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi expedita
+                                            eveniet
+                                            consectetur, voluptates voluptatum, sit excepturi earum. Veniam eius amet,
+                                            accusantium, deserunt officia, quos qui debitis laboriosam velit quis autem!
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi expedita
+                                            eveniet
+                                            consectetur, voluptates voluptatum, sit excepturi earum. Veniam eius amet,
+                                            accusantium, deserunt officia, quos qui debitis laboriosam velit quis autem!
+                                        </p>
+                                    </div>
+                                    <div class="card_element">
+                                        <h2>Title 2</h2>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi expedita
+                                            eveniet
+                                            consectetur, voluptates voluptatum, sit excepturi earum. Veniam eius amet,
+                                            accusantium, deserunt officia, quos qui debitis laboriosam velit quis autem!
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi expedita
+                                            eveniet
+                                            consectetur, voluptates voluptatum, sit excepturi earum. Veniam eius amet,
+                                            accusantium, deserunt officia, quos qui debitis laboriosam velit quis autem!
+                                        </p>
+                                    </div>
+                                    <div class="card_element">
+                                        <h2>Title 3</h2>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi expedita
+                                            eveniet
+                                            consectetur, voluptates voluptatum, sit excepturi earum. Veniam eius amet,
+                                            accusantium, deserunt officia, quos qui debitis laboriosam velit quis autem!
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi expedita
+                                            eveniet
+                                            consectetur, voluptates voluptatum, sit excepturi earum. Veniam eius amet,
+                                            accusantium, deserunt officia, quos qui debitis laboriosam velit quis autem!
+                                        </p>
+                                    </div>
+                                    <div class="card_element">
+                                        <h2>Title 4</h2>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi expedita
+                                            eveniet
+                                            consectetur, voluptates voluptatum, sit excepturi earum. Veniam eius amet,
+                                            accusantium, deserunt officia, quos qui debitis laboriosam velit quis autem!
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi expedita
+                                            eveniet
+                                            consectetur, voluptates voluptatum, sit excepturi earum. Veniam eius amet,
+                                            accusantium, deserunt officia, quos qui debitis laboriosam velit quis autem!
+                                        </p>
+                                    </div>
+                                    <div class="card_element">
+                                        <h2>Title 5</h2>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi expedita
+                                            eveniet
+                                            consectetur, voluptates voluptatum, sit excepturi earum. Veniam eius amet,
+                                            accusantium, deserunt officia, quos qui debitis laboriosam velit quis autem!
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi expedita
+                                            eveniet
+                                            consectetur, voluptates voluptatum, sit excepturi earum. Veniam eius amet,
+                                            accusantium, deserunt officia, quos qui debitis laboriosam velit quis autem!
+                                        </p>
+                                    </div>
+                                    <div class="card_element">
+                                        <h2>Title 6</h2>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi expedita
+                                            eveniet
+                                            consectetur, voluptates voluptatum, sit excepturi earum. Veniam eius amet,
+                                            accusantium, deserunt officia, quos qui debitis laboriosam velit quis autem!
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi expedita
+                                            eveniet
+                                            consectetur, voluptates voluptatum, sit excepturi earum. Veniam eius amet,
+                                            accusantium, deserunt officia, quos qui debitis laboriosam velit quis autem!
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                                <a href="#">See All
+                                    <i class="fa fa-long-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 item">
+                            <div class="item-in">
+                                <h4>Image Posts</h4>
+                                <div class="seperator"></div>
+
+                                <!--SLIDER HERE-->
+                                <div class="horizontal_scroller">
+                                    <div class="card_element" style="background-image: url('../IMAGES/banana.jpeg');background-position: center;background-repeat: no-repeat;background-size: cover;">
+                                        <h2>Banana</h2>
+                                    </div>
+                                    <div class="card_element" style="background-image: url('../IMAGES/bulb.jpeg');background-position: center;background-repeat: no-repeat;background-size: cover;">
+                                        <h2>Bulb</h2>
+                                    </div>
+                                    <div class="card_element" style="background-image: url('../IMAGES/dog.jpeg');background-position: center;background-repeat: no-repeat;background-size: cover;">
+                                        <h2>Doggo</h2>
+                                    </div>
+                                    <div class="card_element" style="background-image: url('../IMAGES/duck.jpeg');background-position: center;background-repeat: no-repeat;background-size: cover;">
+                                        <h2>Ducky</h2>
+                                    </div>
+                                    <div class="card_element" style="background-image: url('../IMAGES/random.jpeg');background-position: center;background-repeat: no-repeat;background-size: cover;">
+                                        <h2>My Art</h2>
+                                    </div>
+                                </div>
+
+                                <a href="#">See All
+                                    <i class="fa fa-long-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 item">
+                            <div class="item-in">
+                                <h4>Video Posts</h4>
+                                <div class="seperator"></div>
+                                <!--SLIDER HERE-->
+                                <div class="horizontal_scroller">
+                                    <div class="card_element" style="background-image: url('../IMAGES/video.jpeg');background-position: center;background-repeat: no-repeat;background-size: cover;">
+                                        <h2>My Video</h2>
+                                    </div>
+                                </div>
+
+                                <a href="#">See All
+                                    <i class="fa fa-long-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 item">
+                            <div class="item-in">
+                                <h4>Audio Posts</h4>
+                                <div class="seperator"></div>
+
+                                <!--SLIDER HERE-->
+                                <div class="horizontal_scroller">
+                                    <div class="card_element" style="background-image: url('../IMAGES/mic.jpeg');background-position: center;background-repeat: no-repeat;background-size: cover;">
+                                        <h2>My Audio</h2>
+                                    </div>
+                                    <div class="card_element" style="background-image: url('../IMAGES/mic.jpeg');background-position: center;background-repeat: no-repeat;background-size: cover;">
+                                        <h2>My Podcast</h2>
+                                    </div>
+                                </div>
+                                
+
+                                <a href="#">See All
+                                    <i class="fa fa-long-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--TODO DO FOOTER-->
+        <iframe src="../HTML/bottom_bar.html"></iframe>
+
+
+
+</body>
+
+</html>
