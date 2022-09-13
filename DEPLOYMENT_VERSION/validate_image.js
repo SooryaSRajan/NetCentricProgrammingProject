@@ -10,9 +10,6 @@ function validateImage(){
     //category
     var category = document.forms["image_form"]["category"].value;
 
-
-document.getElementsByClassName("HOE")[0].style.transfomr = 100;
-
     //validate
     if(image == null || image == ""){
         alert("Please upload an image");

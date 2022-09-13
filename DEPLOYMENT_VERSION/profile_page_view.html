@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="profile.css">
+    <title>Profile</title>
+
+</head>
+
+<body>
+
+    <script>
+
+        let isNavOpen = false;
+        function nav() {
+            if (isNavOpen) {
+                document.getElementById("top_drawer").style.transform = "translate(0px, -100%)";
+                isNavOpen = false;
+            } else {
+                document.getElementById("top_drawer").style.transform = "translate(0px, 0px)";
+                isNavOpen = true;
+            }
+        }
+    </script>
+
+
+    <ul class="nav_bar_ul">
+        <li class="nav_item"><a href="index.html"><span class="nav_logo_item">TalentForage</span></a></li>
+        <li class="nav_item_right">
+            <a href="profile_page.html"><i class="fa fa-user"></i></a>
+            <a href="about.asp"><i class="fa fa-gear"></i></a>
+            <a href="about.asp"><i class="fa fa-sign-out"></i></a>
+        </li>
+        <li class="nav_item_right right_item">
+            <a onclick="nav()"><i class="fa fa fa-bars"></i></a>
+        </li>
+    </ul>
+
+    <div id="top_drawer">
+        <ul>
+            <li class="drawer_list_item">
+                <a href="profile_page.html" class="drawer_item"><i class="fa fa-user drawer_icon"></i><span>Profile</span></a>
+            </li>
+            <li class="drawer_list_item">
+
+                <a href="about.asp" class="drawer_item"><i class="fa fa-gear drawer_icon"></i><span>Settings</span></a>
+            </li>
+            <li class="drawer_list_item">
+
+                <a href="about.asp" class="drawer_item"><i class="fa fa-sign-out drawer_icon"></i><span>Sign
+                        Out</span></a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="center_content">
+        <div class="container mt-4 mb-4 p-3 d-flex justify-content-center">
+            <div class="card p-4">
+                <div class=" image d-flex flex-column justify-content-center align-items-center"> <button
+                        class="btn btn-secondary"> <img src="sticker.png" height="100" width="100" /></button>
+                    <span class="name mt-3">Soorya S</span>
+                    <span class="idd">@soorya_s_rajan</span>
+                    <div class="d-flex flex-row justify-content-center align-items-center gap-2">
+                        <span class="idd1">Oxc4c16a645_b21a</span>
+                        <span><i class="fa fa-copy"></i></span>
+                    </div>
+
+                    <div class="d-flex flex-row justify-content-center align-items-center mt-3"> <span
+                            class="number">127 <span class="follow">Followers</span></span> </div>
+
+                    <div class="d-flex flex-row justify-content-center align-items-center mt-3"> <span class="number">12
+                            <span class="follow">Posts</span></span> </div>
+                            <div class="d-flex flex-row justify-content-center align-items-center mt-3">
+                                <div class=" d-flex mt-2"> <button class="submit" style="margin-right: 10px">View Posts</button> </div>
+                                <div class=" d-flex mt-2"> <button class="submit">Follow</button> </div>
+                            </div>
+                    <div class="text mt-3"> <span>I make art! And photographs maybe, goofy ones</span>
+                    </div>
+                    <div class="gap-3 mt-3 icons d-flex flex-row justify-content-center align-items-center"> <span><i
+                                class="fa fa-twitter"></i></span> <span><i class="fa fa-facebook-f"></i></span> <span><i
+                                class="fa fa-instagram"></i></span> <span><i class="fa fa-linkedin"></i></span> </div>
+                    <div class=" px-2 rounded mt-4 date "> <span class="join">Joined June, 2022</span> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <iframe src="bottom_bar.html"></iframe>
+
+</body>
+
+</html>

@@ -2,7 +2,7 @@
 <!DOCTYPE TalentForage SYSTEM "image_data.dtd">
 <TalentForage>
     <!-- Image Data Table-->
-    <image_data id="nshwqiuy2h178">
+    <image_data id="ONE">
         <user_id>dn18y912n9yed</user_id>
         <image_url>https://myhost/path/to/file.jpeg</image_url>
         <title>My Art</title>
@@ -18,7 +18,7 @@
         <visibility>public</visibility>
     </image_data>
 
-    <image_data id="neo1278go129t">
+    <image_data id="ADHEENA">
         <user_id>dn18y912n9yed</user_id>
         <image_url>https://myhost/path/to/other_file.png</image_url>
         <title>My Photography</title>
@@ -34,7 +34,7 @@
         <visibility>private</visibility>
     </image_data>
 
-    <image_data id="ne7182t12">
+    <image_data id="ADHEENA">
         <user_id>dn18y912n9yed</user_id>
         <image_url>https://myhost/path/to/other_file.jpg</image_url>
         <title>Cray Clay</title>

@@ -1,7 +1,7 @@
 <!ELEMENT TalentForage (image_data*)>
-<!ELEMENT image_data (user_id,image_url,title,sub_title,created_date,uploaded_date,price,no_of_views,no_of_likes,allow_comment,comments_id,category,visibility)>
-<!ATTLIST image_data id CDATA #REQUIRED>
+<!ELEMENT image_data (user_id,image_url,title,sub_title,created_date,uploaded_date,price,no_of_views,no_of_likes,allow_comment,comments_id,category,visibility)+>
 <!ELEMENT user_id (#PCDATA)>
+<!ATTLIST image_data id (ONE | TWO) #REQUIRED>
 <!ELEMENT image_url (#PCDATA)>
 <!ELEMENT title (#PCDATA)>
 <!ELEMENT sub_title (#PCDATA)>

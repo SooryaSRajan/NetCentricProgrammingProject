@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="main.css">
+    <title>Upload Text</title>
+
+</head>
+
+<body>
+
+    <script>
+
+        let isNavOpen = false;
+        function nav() {
+            if (isNavOpen) {
+                document.getElementById("top_drawer").style.transform = "translate(0px, -100%)";
+                isNavOpen = false;
+            } else {
+                document.getElementById("top_drawer").style.transform = "translate(0px, 0px)";
+                isNavOpen = true;
+            }
+        }
+    </script>
+
+
+    <ul class="nav_bar_ul">
+        <li class="nav_item"><a href="index.html"><span class="nav_logo_item">TalentForage</span></a></li>
+        <li class="nav_item_right">
+            <a href="profile_page.html"><i class="fa fa-user"></i></a>
+            <a href="about.asp"><i class="fa fa-gear"></i></a>
+            <a href="about.asp"><i class="fa fa-sign-out"></i></a>
+        </li>
+        <li class="nav_item_right right_item">
+            <a onclick="nav()"><i class="fa fa fa-bars"></i></a>
+        </li>
+    </ul>
+
+    <div id="top_drawer">
+        <ul>
+            <li class="drawer_list_item">
+                <a href="profile_page.html" class="drawer_item"><i class="fa fa-user drawer_icon"></i><span>Profile</span></a>
+            </li>
+            <li class="drawer_list_item">
+
+                <a href="about.asp" class="drawer_item"><i class="fa fa-gear drawer_icon"></i><span>Settings</span></a>
+            </li>
+            <li class="drawer_list_item">
+
+                <a href="about.asp" class="drawer_item"><i class="fa fa-sign-out drawer_icon"></i><span>Sign Out</span></a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="center_content">
+        <div class="center_card">
+            <div class="row">
+                <div class="column_left">
+                    <h2>Report</h2>
+                    <p class="desc">
+                        </br>
+                        Found something wrong?
+                        </br></br>
+                        Report it here!
+                        </br></br>
+                        Our team will look into the problem and get back to you!
+                    </p>
+                </div>
+                <div class="column">
+                    <div class="column_responsive">
+                        <h2>Report</h2>
+                        <p class="desc">
+                            </br>
+                            Found something wrong?
+                            </br></br>
+                            Report it here!
+                            </br></br>
+                            Our team will look into the problem and get back to you!
+                        </p>
+                    </div>
+                    <form>
+                        <div class="input_tag">Title of the report</div>
+                        <input type="text" placeholder="Title">
+                        
+                        <div class="input_tag">Description</div>
+                        <textarea id="text" name="text" rows="4" cols="50">
+
+                        </textarea>
+
+                        <button type="submit" class="submit">Upload</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <iframe src="bottom_bar.html"></iframe>
+
+
+</body>
+
+</html>
