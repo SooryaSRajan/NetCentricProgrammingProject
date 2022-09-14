@@ -19,7 +19,7 @@ function validateText(){
     }
 
     if(text_name == null || text_name == ""){
-        alert("Please enter an title");
+        alert("Please enter a title");
         return false;
     }
 

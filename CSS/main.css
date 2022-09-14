@@ -80,6 +80,14 @@
     justify-content: center;
 }
 
+.center_content_unsized {
+    padding-top: 70px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .center_card {
     margin: auto;
     width: 80%;

@@ -1,5 +1,8 @@
+form{
+    width: 100%;
+}
 .card {
-    width: 350px;
+    width: 550px;
     background-color: #efefef;
     border: none;
     cursor: pointer;
