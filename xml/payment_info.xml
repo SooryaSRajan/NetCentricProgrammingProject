@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE TalentForage SYSTEM "./payment_info.dtd">
+<TalentForage>
+    <!-- Image Data Table-->
+    <payment_info user_id="129e128ng">
+        <user_name>SooryaS</user_name>
+        <phone_number>9813276412</phone_number>
+        <email_address>soorya.s@gmail.com</email_address>
+        <upi_id>sooryasrajan@okBANK.com</upi_id>
+    </payment_info>
+
+    <payment_info user_id="4391287gudsa">
+        <user_name>User2</user_name>
+        <phone_number>9876543210</phone_number>
+        <email_address>soorya.s@gmail.com</email_address>
+        <upi_id>sooryasrajan@okBANK.com</upi_id>
+    </payment_info>
+
+    <payment_info user_id="qwyeb8127t">
+        <user_name>User3</user_name>
+        <phone_number>6389876543</phone_number>
+        <email_address>soorya.s@gmail.com</email_address>
+        <upi_id>sooryasrajan@okBANK.com</upi_id>
+    </payment_info>
+
+</TalentForage>

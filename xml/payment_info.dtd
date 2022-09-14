@@ -1,0 +1,7 @@
+<!ELEMENT TalentForage (payment_info*)>
+<!ELEMENT payment_info (user_name,phone_number,email_address,upi_id)+>
+<!ATTLIST payment_info user_id CDATA #REQUIRED>
+<!ELEMENT user_name (#PCDATA)>
+<!ELEMENT phone_number (#PCDATA)>
+<!ELEMENT email_address (#PCDATA)>
+<!ELEMENT upi_id (#PCDATA)>
