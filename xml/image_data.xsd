@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="TalentForage" type="TalentForageType"/>
+  <xs:complexType name="image_dataType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="user_id"/>
+      <xs:element name="image_url">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="https://myhost/path/to/file.jpeg"/>
+            <xs:enumeration value="https://myhost/path/to/other_file.png"/>
+            <xs:enumeration value="https://myhost/path/to/other_file.jpg"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="title">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="My Art"/>
+            <xs:enumeration value="My Photography"/>
+            <xs:enumeration value="Cray Clay"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="sub_title">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="This is one of my recent art works"/>
+            <xs:enumeration value="Sunrises represents a glimmer of hope, here's it's essence captured in photography"/>
+            <xs:enumeration value="A clay model I made describing the chaos in this world. "/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="created_date">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="22/06/2021"/>
+            <xs:enumeration value="09/07/2022"/>
+            <xs:enumeration value="14/06/2022"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="uploaded_date">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="07/08/2022"/>
+            <xs:enumeration value="04/07/2022"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="price">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="50"/>
+            <xs:enumeration value="250"/>
+            <xs:enumeration value="100"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="no_of_views">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="123"/>
+            <xs:enumeration value="3124"/>
+            <xs:enumeration value="32123"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="no_of_likes">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="67"/>
+            <xs:enumeration value="2998"/>
+            <xs:enumeration value="22334"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="allow_comment">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="true"/>
+            <xs:enumeration value="false"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="comments_id">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="120n8tew6f1237"/>
+            <xs:enumeration value="null"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="category">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="ART"/>
+            <xs:enumeration value="PHOTOGRAPHY"/>
+            <xs:enumeration value="CRAFT"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="visibility">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="public"/>
+            <xs:enumeration value="private"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="id" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="TalentForageType">
+    <xs:sequence>
+      <xs:element type="image_dataType" name="image_data" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation> Image Data Table</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

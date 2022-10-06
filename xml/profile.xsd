@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="TalentForage">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="payment_info" maxOccurs="unbounded">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="profile_name" type="xsd:string"/>
+                            <xsd:element name="user_name" type="xsd:string"/>
+                            <xsd:element name="phone_number" type="xsd:string"/>
+                            <xsd:element name="email_address" type="xsd:string"/>
+                            <xsd:element name="face_book" type="xsd:string"/>
+                            <xsd:element name="twitter" type="xsd:string"/>
+                            <xsd:element name="instagram" type="xsd:string"/>
+                            <xsd:element name="linked_in" type="xsd:string"/>
+                        </xsd:sequence>
+                        <xsd:attribute name="user_id" type="xsd:string" use="required"/>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>
