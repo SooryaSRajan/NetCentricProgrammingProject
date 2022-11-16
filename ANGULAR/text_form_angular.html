@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Upload texts</title>
+    <link rel="stylesheet" href="../CSS/main.css">
+    <style>
+        .error {
+            margin-top: 10px;
+            font-size: 13px;
+            color: red;
+        }
+    </style>
+</head>
+
+<body ng-app="textApp">
+
+    <script>
+
+        let isNavOpen = false;
+        function nav() {
+            if (isNavOpen) {
+                document.getElementById("top_drawer").style.transform = "translate(0px, -100%)";
+                isNavOpen = false;
+            } else {
+                document.getElementById("top_drawer").style.transform = "translate(0px, 0px)";
+                isNavOpen = true;
+            }
+        }
+    </script>
+
+
+    <ul class="nav_bar_ul">
+        <li class="nav_item"><a href="index.html"><span class="nav_logo_item">TalentForage</span></a></li>
+        <li class="nav_item_right">
+            <a href="profile_page.html"><i class="fa fa-user"></i></a>
+            <a href="about.asp"><i class="fa fa-gear"></i></a>
+            <a href="about.asp"><i class="fa fa-sign-out"></i></a>
+        </li>
+        <li class="nav_item_right right_item">
+            <a onclick="nav()"><i class="fa fa fa-bars"></i></a>
+        </li>
+    </ul>
+
+    <div id="top_drawer">
+        <ul>
+            <li class="drawer_list_item">
+                <a href="profile_page.html" class="drawer_item"><i
+                        class="fa fa-user drawer_icon"></i><span>Profile</span></a>
+            </li>
+            <li class="drawer_list_item">
+
+                <a href="about.asp" class="drawer_item"><i class="fa fa-gear drawer_icon"></i><span>Settings</span></a>
+            </li>
+            <li class="drawer_list_item">
+
+                <a href="about.asp" class="drawer_item"><i class="fa fa-sign-out drawer_icon"></i><span>Sign
+                        Out</span></a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="center_content">
+        <div class="center_card">
+            <div class="row">
+                <div class="column_left">
+                    <h2>Share Text</h2>
+                    <p class="desc">
+                        </br>
+                        Got something to show the world?
+                        </br></br>
+                        Maybe a piece of your poetry?
+                        </br></br>
+                        Or maybe an article?
+                        </br></br>
+                        Upload it to TalentForage and let people know how skillful you are!
+                        </br></br></br>
+                        SkillForage lets you upload text of anything you wanna show people, could be poetry, articles, documents, ANYTHING!
+                        </br></br>
+                        Choose a suitable category to make sure it reaches the right people. Can't find a category?
+                        Request for one!
+                        Our team will review it and add it if the request is valid!
+                    </p>
+                </div>
+                <div class="column">
+                    <div class="column_responsive">
+                        <h2>Share Text</h2>
+                        <p class="desc">
+                            </br>
+                            Got something to show the world?
+                            </br></br>
+                            Maybe a piece of your poetry?
+                            </br></br>
+                            Or maybe an article?
+                            </br></br>
+                            Upload it to TalentForage and let people know how skillful you are!
+                            </br></br></br>
+                            SkillForage lets you upload text of anything you wanna show people, could be poetry, articles, documents, ANYTHING!
+                            </br></br>
+                            Choose a suitable category to make sure it reaches the right people. Can't find a category?
+                            Request for one!
+                            Our team will review it and add it if the request is valid!
+                        </p>
+                    </div>
+                    <div ng-controller="formController">
+
+                        <form name="text_form" novalidate action="/uploadText" method="post">
+                            <div class="input_tag_first">Your Text Snippet</div>
+                            <textarea ng-model="text" id="text" name="text" rows="4" cols="50" name="text"  required minlength="5">
+    
+                            </textarea>
+                            <span class="error" ng-show="text_form.text.$dirty || text_form.text.$invalid">
+                                <span ng-show="text_form.text.$error.required">Required!</span>
+                                <span ng-show="text_form.text.$error.minlength">There has to be a minimum of 5
+                                    characters</span>
+                            </span>
+                            <br>
+
+                            <div class="input_tag">Title of your work</div>
+                            <input ng-model="title" type="text" placeholder="Title" name="title" required minlength="5">
+                            <span class="error" ng-show="text_form.title.$dirty || text_form.title.$invalid">
+                                <span ng-show="text_form.title.$error.required">Required!</span>
+                                <span ng-show="text_form.title.$error.minlength">There has to be a minimum of 5
+                                    characters</span>
+                            </span>
+
+                            <div class="input_tag">Description of your work</div>
+                            <input ng-model="desc" type="text" placeholder="Description" name="desc" required
+                                minlength="20">
+                            <span class="error" ng-show="text_form.desc.$dirty || text_form.desc.$invalid">
+                                <span ng-show="text_form.desc.$error.required">Required!</span>
+                                <span ng-show="text_form.desc.$error.minlength">There has to be a minimum of 20
+                                    characters</span>
+
+                            </span>
+
+                            <div class="input_tag">Created Date</div>
+                            <input ng-model="date" type="date" placeholder="Date" name="date" required>
+                            <span class="error" ng-show="text_form.date.$dirty || text_form.date.$invalid">
+                                <span ng-show="text_form.date.$error.required">Required!</span>
+                            </span>
+
+                            <div class="input_tag">Contribution Price</div>
+                            <input ng-model="price" type="number" placeholder="Price" name="price" min="0">
+                            <span class="error" ng-show="text_form.price.$dirty || text_form.price.$invalid">
+                                <span ng-show="text_form.price.$error.required">Required!</span>
+                                <span ng-show="text_form.price.$error.min">Value can be from 0 - your choice</span>
+
+                            </span>
+
+                            <div class="input_tag">Category of text</div>
+                            <select ng-model="category" name="category" id="category" name="category">
+                                <option value="art">Art</option>
+                                <option value="photography">Photography</option>
+                                <option value="craft">Craft</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <span class="error" ng-show="text_form.category.$dirty || text_form.category.$invalid">
+                                <span ng-show="text_form.category.$error.required">Required!</span>
+                            </span>
+
+                            <div class="flex_div">
+                                <div class="flex_inner">
+                                    <div class="input_tag">Allow Comments</div>
+                                    <input ng-model="comment" type="checkbox" placeholder="Comment" name="comment">
+                                </div>
+
+                                <div class="flex_inner">
+                                    <div class="input_tag">Public</div>
+                                    <input ng-model="view" type="checkbox" placeholder="View" name="status">
+                                </div>
+                            </div>
+
+                            <button class="submit"
+                                ng-hide="text_form.title.$invalid || text_form.desc.$invalid ||  text_form.date.$invalid || text_form.price.$invalid || text_form.category.$invalid"
+                                ng-click="submit()">Upload</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var app = angular.module('textApp', []);
+        app.controller("formController", function ($scope) {
+            $scope.submit = function () {
+                if ($scope.text_form.$valid) {
+                    alert("Valid form!\nSubmitted data: \nTitle: " + $scope.title + "\nDescription: " + $scope.desc + "\nDate: " + $scope.date + "\nContribution Price: " + $scope.price + "\nCategory: " + $scope.category)
+                }
+                else {
+                    alert("Please check all errors")
+                }
+            }
+        })
+    </script>
+
+    <iframe src="../HTML/bottom_bar.html"></iframe>
+
+</body>
+
+</html>
