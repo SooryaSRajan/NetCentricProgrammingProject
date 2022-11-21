@@ -147,10 +147,7 @@
 
                             <div class="input_tag">Category of Image</div>
                             <select ng-model="category" name="category" id="category" name="category" ng-value="originalData.category">
-                                <option value="art">Art</option>
-                                <option value="photography">Photography</option>
-                                <option value="craft">Craft</option>
-                                <option value="other">Other</option>
+                                <option value="{{option.option}}" ng-repeat="option in options">{{option.option}}</option>
                             </select>
                             <span class="error" ng-show="image_form.category.$dirty || image_form.category.$invalid">
                                 <span ng-show="image_form.category.$error.required">Required!</span>
@@ -183,6 +180,11 @@
         app.controller("formController", function ($scope, $http) {
             $scope.originalData = JSON.parse(sessionStorage.imageData);
             //update
+            $scope.options = []
+            $http.get("http://localhost:4000/getDropdownData/image").then(function (data) {
+                $scope.options = data.data;
+                console.log($scope.options);
+            });
             $scope.submit = function () {
                 var data = {
                     "id": $scope.originalData._id,

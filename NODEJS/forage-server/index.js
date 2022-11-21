@@ -4,6 +4,7 @@ const imageUpload = require('./routes/image-form')
 const textUpload = require('./routes/text-form')
 const getPosts = require('./routes/get-posts')
 const managePosts = require('./routes/manage-posts')
+const getDropdownData = require('./routes/get-dropdown-data')
 const path = require("path");
 const PORT = process.env.PORT || 4000
 
@@ -39,6 +40,7 @@ app.use('/uploadImage', imageUpload)
 app.use('/uploadText', textUpload)
 app.use('/getPosts', getPosts)
 app.use('/managePosts', managePosts)
+app.use('/getDropdownData', getDropdownData)
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);

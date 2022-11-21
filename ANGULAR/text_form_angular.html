@@ -80,7 +80,8 @@
                         </br></br>
                         Upload it to TalentForage and let people know how skillful you are!
                         </br></br></br>
-                        SkillForage lets you upload text of anything you wanna show people, could be poetry, articles, documents, ANYTHING!
+                        SkillForage lets you upload text of anything you wanna show people, could be poetry, articles,
+                        documents, ANYTHING!
                         </br></br>
                         Choose a suitable category to make sure it reaches the right people. Can't find a category?
                         Request for one!
@@ -100,7 +101,8 @@
                             </br></br>
                             Upload it to TalentForage and let people know how skillful you are!
                             </br></br></br>
-                            SkillForage lets you upload text of anything you wanna show people, could be poetry, articles, documents, ANYTHING!
+                            SkillForage lets you upload text of anything you wanna show people, could be poetry,
+                            articles, documents, ANYTHING!
                             </br></br>
                             Choose a suitable category to make sure it reaches the right people. Can't find a category?
                             Request for one!
@@ -111,8 +113,9 @@
 
                         <form name="text_form" novalidate action="/uploadText" method="post">
                             <div class="input_tag_first">Your Text Snippet</div>
-                            <textarea ng-model="text" id="text" name="text" rows="4" cols="50" name="text"  required minlength="5">
-    
+                            <textarea ng-model="text" id="text" name="text" rows="4" cols="50" name="text" required
+                                minlength="5">
+
                             </textarea>
                             <span class="error" ng-show="text_form.text.$dirty || text_form.text.$invalid">
                                 <span ng-show="text_form.text.$error.required">Required!</span>
@@ -155,10 +158,7 @@
 
                             <div class="input_tag">Category of text</div>
                             <select ng-model="category" name="category" id="category" name="category">
-                                <option value="art">Art</option>
-                                <option value="photography">Photography</option>
-                                <option value="craft">Craft</option>
-                                <option value="other">Other</option>
+                                <option value="{{option.option}}" ng-repeat="option in options">{{option.option}}</option>
                             </select>
                             <span class="error" ng-show="text_form.category.$dirty || text_form.category.$invalid">
                                 <span ng-show="text_form.category.$error.required">Required!</span>
@@ -188,7 +188,12 @@
 
     <script>
         var app = angular.module('textApp', []);
-        app.controller("formController", function ($scope) {
+        app.controller("formController", function ($scope, $http) {
+            $scope.options = []
+            $http.get("http://localhost:4000/getDropdownData/text").then(function (data) {
+                $scope.options = data.data;
+                console.log($scope.options);
+            });
             $scope.submit = function () {
                 if ($scope.text_form.$valid) {
                     alert("Valid form!\nSubmitted data: \nTitle: " + $scope.title + "\nDescription: " + $scope.desc + "\nDate: " + $scope.date + "\nContribution Price: " + $scope.price + "\nCategory: " + $scope.category)
