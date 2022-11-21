@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 const multer = require('multer');
 const {v4: uuidv4} = require('uuid');
-const Image = require('../models/imageData');
+const Image = require('../models/ImageData');
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {

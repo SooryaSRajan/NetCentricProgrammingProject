@@ -3,6 +3,7 @@ const app = express()
 const imageUpload = require('./routes/image-form')
 const textUpload = require('./routes/text-form')
 const getPosts = require('./routes/get-posts')
+const managePosts = require('./routes/manage-posts')
 const path = require("path");
 const PORT = process.env.PORT || 4000
 
@@ -37,6 +38,7 @@ app.get("/", (req, res) => {
 app.use('/uploadImage', imageUpload)
 app.use('/uploadText', textUpload)
 app.use('/getPosts', getPosts)
+app.use('/managePosts', managePosts)
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
